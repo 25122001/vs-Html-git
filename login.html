@@ -1,15 +1,194 @@
 <!DOCTYPE html>
-<!-- html:5 or !+enter = default html code -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- the above link is online -->
+
+     <style> 
+        .btn-outline-primary{
+            background-color: aqua;
+        }
+    </style> 
+
+
+    
 </head>
 <body>
-    <p><h2>Santhosh</h2>hi this is first program</p>
-    <h3>testing branch</h3>
+<h1>Bootstrap testing</h1>
+<h2>class testing</h2>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>  <!-- the above link is online -->
+    <h2 class = "h1">calling h1 class from h2 tag</h2>
+    <!-- call the style of h1 -->
+    <p class="lead">This is a lead text</p>
+
+    <p class="lead text-center">this is center text</p>
+
+    <h1 class="display-1">Alternate for head tags</h1>
+    <h1 class="text-decoration-underline">santhosh </h1>
+    <h1 class="text-decoration-line-through">kumar</h1>
+    <h1 class="blockquote">hi!how is the blockquote</h1>
+
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <h1 class="text-primary">this is color text</h1>
+<h1 class="text-white bg-primary">hi ....</h1>
+
+<a href="#" class="btn btn-secondary">anchor tag as a button</a>
+
+<button class="btn btn-sm btn-info">button large</button>
+<!-- sm,xs,md,lg sizes of button -->
+
+<div class="buttongroup">
+    <a href="#" class="btn btn-primary">button1</a>
+    <a href="#" class="btn btn-secondary">button2</a>
+    <a href="#" class="btn btn-success">button3</a>
+</div>
+
+<!-- utillities below -->
+<div class="m-0 p-0 bg-primary">margin padding</div>
+
+<div class="m-1 p-1 bg-primary">margin padding</div>
+
+<div class="m-5 p-5 bg-primary">margin padding</div>
+<div class="mt-1 mb-3 ms-2 me-5 bg-danger">margin padding 2</div>
+<div class="m-2 p-2 border">basic border</div>
+<div class="m-2 p-2 border-top border-end border-danger">basic border</div>
+<div class="m-2 p-2 rounded border border-5 border-info">rounded border</div>
+<div class="m-2 p-2 rounded-pill border border-5 border-info ">rounded border</div>
+
+<div class="m-2 p-2 shadow bg-primary">shadow</div>
+
+<!-- containers below -->
+
+<div class="container text-center">
+    <div class="row">
+
+      <div class="col bg-primary">
+        Column1
+      </div>
+      <div class="col bg-danger">
+        Column2
+      </div>
+      <div class="col bg-primary">
+        Column3
+      </div>
+
+      <div class="col bg-success">
+        Column4
+      </div>
+
+      <div class="col-5 bg-warning">
+        Column5
+      </div>       
+
+    </div>
+  </div>
+
+
+  <div class="container-lg my-5">
+    <div class="row">
+        <div class="col">
+        <div class="p-5 bg-success text-white">col div1</div>
+        </div>
+        <div class="col">
+            <div class="p-5 bg-success text-white">col div2</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-success text-white">col div3</div>
+                </div>
+    </div>
+  </div>
+
+  
+  <div class="container-lg my-5">
+    <div class="row">
+        <div class="col-6">
+        <div class="p-5 bg-success text-white">col div1</div>
+        </div>
+        <div class="col-4">
+            <div class="p-5 bg-success text-white">col div2</div>
+            </div>
+            <div class="col-2">
+                <div class="p-5 bg-success text-white">col div3</div>
+                </div>
+    </div>
+  </div>
+
+
+  <div class="container-lg my-5">
+    <div class="row">
+        <!-- depending upon the size variation adjust the values sm,lg  -->
+        <div class="col-sm-4 col-lg-6">
+        <div class="p-5 bg-success text-white">col div1</div>
+        </div>
+        <div class="col-sm-4 col-lg-3">
+            <div class="p-5 bg-success text-white">col div2</div>
+            </div>
+            <div class="col-sm-4 col-lg-3">
+                <div class="p-5 bg-success text-white">col div3</div>
+                </div>
+    </div>
+  </div>
+
+
+  <div class="container-lg my-5">
+    <div class="row justify-content-between">
+    <!-- justify the colums position -->
+        <div class="col-3">
+        <div class="p-5 bg-success text-white">col div1</div>
+        </div>
+        <div class="col-3">
+            <div class="p-5 bg-success text-white">col div2</div>
+            </div>
+            <div class="col-3">
+                <div class="p-5 bg-success text-white">col div3</div>
+                </div>
+    </div>
+  </div>
+
+  <div class="container text-center ">
+    <div class="row row-cols-3">
+      <div class="col bg-success">Column1</div>
+      <div class="col bg-primary">Column2</div>
+      <div class="col bg-secondary">Column3</div>
+      <div class="col bg-danger">Column4</div>
+    </div>
+  </div>
+
+  <div class="container-lg my-5">
+    <div class="row row-cols-3">
+    <!-- justify the colums position -->
+        <div class="col">
+        <div class="p-5 bg-success text-white">col div1</div>
+        </div>
+        <div class="col">
+            <div class="p-5 bg-success text-white">col div2</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-success text-white">col div3</div>
+                </div>
+
+                <div class="col">
+                    <div class="p-5 bg-success text-white">col div4</div>
+                    </div>
+    </div>
+  </div>
+
+
+  <div class="container text-center">
+
+<!-- responsive -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+      <div class="col bg-danger">Column</div>
+      <div class="col bg-secondary">Column</div>
+      <div class="col bg-info">Column</div>
+      <div class="col bg-primary">Column</div>
+    </div>
+  </div>
+  
+    
 </body>
-</html>
-html
+</html>   
