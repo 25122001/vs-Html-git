@@ -67,100 +67,72 @@ favcolors[4] = "purple";
 
 console.log(favcolors[4]);
 
-
-
-
 ///       FUNCTIONS
 
+function data() {
+  // method1
 
-function data(){  // method1
+  let id = 3456;
+  var marks = "san"; // which is accessed it doesnot show line
 
-    let id = 3456;  
-   var marks ="san";  // which is accessed it doesnot show line
-   
-    let result ="this is you searched" + "  "+marks ;
-    console.log(result)
-
+  let result = "this is you searched" + "  " + marks;
+  console.log(result);
 }
 data();
 
-
-function data1(id)// method 2
-{
-    
-
-     let result1 ="this is you searched" + "  "+id ;
-     console.log(result1)
- 
+function data1(id) {
+  // method 2
+  let result1 = "this is you searched" + "  " + id;
+  console.log(result1);
 } // function called three times
-data1(3456)
-data1(0101) // taken as binary code
-data1(1234)
+data1(3456);
+data1(0101); // taken as binary code
+data1(1234);
 
-
-
-
-function data2(firstname,lastname)// method 3
-{
-    
-     let output ="this is you searched" + "  "+firstname+"  " + lastname;
-     console.log(output)
- 
+function data2(firstname, lastname) {
+  // method 3
+  let output = "this is you searched" + "  " + firstname + "  " + lastname;
+  console.log(output);
 }
-data2("santho","yuva")
+data2("santho", "yuva");
 
-
-function data3(firstname,percent)// method 4
-{
-    
-     let output ="this is you searched" + "  "+firstname+"  " + percent;
-     console.log(output)
- 
+function data3(firstname, percent) {
+  // method 4
+  let output = "this is you searched" + "  " + firstname + "  " + percent;
+  console.log(output);
 }
-data3("santho",500)
+data3("santho", 500);
 
-
-
-function data4(firstname,percent)// method 5
-{
-    
-  
-     console.log(firstname + percent)
- 
+function data4(firstname, percent) {
+  // method 5
+  console.log(firstname + percent);
 }
-data4("santho",500)
+data4("santho", 500);
 
-
-
-
-function data4(firstname,percent)// method 5
-{
-    
-  
-     console.log(firstname + percent)
- 
+function data4(firstname, percent) {
+  // method 5
+  console.log(firstname + percent);
 }
 
 // adding two numbers
 
-function add(num1,num2)
-{
-    console.log(num1+num2)
-    console.log(num1 ** num2)
+function add(num1, num2) {
+  console.log(num1 + num2);
+  console.log(num1 ** num2);
 }
 
-add(5,10)
+add(5, 10);
 
 //  ASSIGNMENT OPERATOR
 
 let y = 100;
-Y = y+ 10 // Y += 10 is not possible //  y += 10 is possible
-console.log(Y)
+Y = y + 10; // Y += 10 is not possible //  y += 10 is possible
+console.log(Y);
 
 // ARITHMETIC OPERATOR
 
 let test = 50;
-console.log(test);// before pre-increment
+console.log(test); // before pre-increment
 console.log(++test); // at pre-increment
 console.log(test); //after pre-increment
 let test1 = 50;
@@ -173,38 +145,34 @@ console.log(test2); // after pre-decrement
 console.log(test2--); //at pre-decrement
 console.log(test2); // after pre-decrement
 
-
 //     COMPARISON OPERATOR
 
-let com = 4
-console.log(com<5);
-console.log(com<=1);
+let com = 4;
+console.log(com < 5);
+console.log(com <= 1);
 console.log(com === 4); // strict Equality operator
-console.log('com' === 4); //------------->   careful when comparison and equality
+console.log("com" === 4); //------------->   careful when comparison and equality
 console.log(com == 4); // lose equality operator
-console.log('com' == 4); //------------->   careful when comparison and equality
-console.log(com !==4);  // not equality operator
-console.log('santhosh'>'kumar'); // it taken as dictionery 
-console.log('5'> 8); // javascript is too smart the character is knew as number 
+console.log("com" == 4); //------------->   careful when comparison and equality
+console.log(com !== 4); // not equality operator
+console.log("santhosh" > "kumar"); // it taken as dictionery
+console.log("5" > 8); // javascript is too smart the character is knew as number
 console.log(true == 1); // 1=true, 0=false ;
-
 
 //      TERNARY OPERATOR
 
 let age = 24;
-let type = age > 18 ? "adult ticket":"child ticket" // note termination should not use here
+let type = age > 18 ? "adult ticket" : "child ticket"; // note termination should not use here
 console.log(type);
-
 
 //      Logical operator
 
 let highincome = true;
 let cibilscore = true;
-let loanstatus =  highincome && cibilscore;
+let loanstatus = highincome && cibilscore;
 let applicationstatus = !loanstatus;
 console.log("Loan status: " + loanstatus);
-console.log("application status:"+applicationstatus);
-
+console.log("application status:" + applicationstatus);
 
 // logical operator with non-boolean values
 /*     RULES 
@@ -222,7 +190,211 @@ console.log("application status:"+applicationstatus);
 
 1)anything which is not false it is truthy.*/
 
-let color1= undefined;
-let color2="blue";
-let selectedcolor = color1 || color2   // note termination should not use here
+let color1 = undefined;
+let color2 = "blue";
+let selectedcolor = color1 || color2; // note termination should not use here
 console.log(selectedcolor);
+
+//   IF CONDITION
+
+let verify = 10;
+
+if (verify < 20) {
+  console.log("condition:correct");
+  console.log("it is possible to give two output");
+} else console.log("condition:incorrect"); // without curly braces it can execute when it gives single output
+
+// example 2
+let raining = true;
+let cloudy = false;
+if (raining || cloudy) console.log("don't forget to take umberalla");
+else console.log("good wheather");
+
+//   example 3
+
+let hrs = new Date();
+let hour = hrs.getHours();
+// let hour =new Date().getHours();
+if (hour >= 0 && hour <= 12) {
+  console.log("goodmorning");
+} else if (hour > 12 && hour <= 16) {
+  console.log("good afternoon");
+} else hour > 16 && hour <= 24;
+{
+  console.log("good evening");
+}
+
+
+//    SWITCH CASE
+
+let grade = "D";              //METHOD 1
+switch(grade)
+{
+  case "S":
+    console.log("you got S grade");
+    break;
+
+  case "A":
+    console.log("you got A grade");
+    break;
+
+  case "B":
+    console.log("you got B grade");
+    break;
+
+  case "C":
+    console.log("you got C grade");
+    break;
+
+case "D":
+case "E":
+  console.log("you got fail");
+  console.log("you need to Reappear");
+  break;
+
+  default :
+  console.log("UNKNOWN GRADE");
+
+}
+
+let marks = 70;   //method 2
+switch(true){
+  case marks<50 :
+    console.log("fail");
+    break;
+  case marks>=50  && marks <=89:
+    console.log("good.improve yourself")  // always make the order of value either in ascending nor descending
+    break;
+
+  case marks>=90:
+    console.log("Excellent")
+    break;
+
+  default :
+  console.log("NOT APPLICABLE NUMBER")
+}
+
+
+//               LOOPING
+
+
+for(let i =0 ; i<=5 ; i++)   //intiate with let 
+{
+  console.log(i);
+}
+//////////////////////////////////////////////////
+for (let i=0 ;i<=10 ;i++)                //FOR LOOP
+{
+  if(i%2 !== 0)
+  {
+    console.log("print odd numbers",i);
+  }
+}
+
+///////////////////////////////////////////////
+
+const studentdata = {                 
+
+  stuname : "ram",         // This is OBJECT
+  stuid : 1234,
+  sex: "male"
+
+};                                            
+
+for(let key in studentdata)     //FOR IN LOOP    
+{
+  console.log(key + ":",studentdata[key]);    //using bracket notation
+}
+///////////////////////////////////////////////////
+
+
+const colour = ['red','blue','green'];     // This is array
+for (let key in colour){                   //FOR IN LOOP    
+  console.log(key + ":", colour [key]);    //array takes position as object name
+}
+
+//////////////////////////////////////////////////
+
+let colour1 = ['red','blue','green'] ; 
+for(let anonymous of colour)   //FOR OF LOOP  
+{
+  console.log("color values:"+ "  "+anonymous);
+}
+
+///////////////////////////////////////////////////
+
+let i=10                     //WHILE LOOP
+while(i>=1)
+{
+ if(i%2 ==0)
+
+ {
+  console.log("print even numbers",i);
+ }
+ i--;
+}
+
+////////////////////////////////////////////////////
+
+let z = 5;                   //DO WHILE LOOP
+
+do{
+  console.log(z);
+  z++;
+}
+while(z<10);
+
+////////////////////////////////////////////////////
+
+                 /////////////////OOOPS CONCEPT
+
+let studata2 =
+{
+ age: 24,
+ name1 : "Anbu",
+ City : "chennai",
+ state : "Tamil nadu",
+ interest: ['creating,teaching new things.'],
+ isalive: true,
+ address: {
+  city: "chennai",
+  state: "Tamilnadu",
+ },
+ greeting: function(){
+
+  let msg = "My name is" + name2 +",i love"+ interest;
+  console.log(msg);
+ }
+
+};
+
+console.log(studata2.state);
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+let age1 = 24;
+let name2 = "santhosh";
+ 
+ let interest =  ['creating,teaching new things.'];
+ 
+ let address = {
+  city: "chennai",
+  state: "Tamilnadu",
+ }
+
+ function greeting1(){
+
+  let msg = "My name is" + name2 +",i love"+ interest;
+  console.log(msg);
+
+ }
+
+ greeting1();
