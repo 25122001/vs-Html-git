@@ -189,3 +189,40 @@ console.log('5'> 8); // javascript is too smart the character is knew as number
 console.log(true == 1); // 1=true, 0=false ;
 
 
+//      TERNARY OPERATOR
+
+let age = 24;
+let type = age > 18 ? "adult ticket":"child ticket" // note termination should not use here
+console.log(type);
+
+
+//      Logical operator
+
+let highincome = true;
+let cibilscore = true;
+let loanstatus =  highincome && cibilscore;
+let applicationstatus = !loanstatus;
+console.log("Loan status: " + loanstatus);
+console.log("application status:"+applicationstatus);
+
+
+// logical operator with non-boolean values
+/*     RULES 
+
+<-----------FALSY--------->  
+
+
+ 1)nan(not a number)
+ 2)false
+ 3)undefined
+ 4)0
+ 5)'',->,""
+---------------------------
+<--------TRUTY------------->
+
+1)anything which is not false it is truthy.*/
+
+let color1= undefined;
+let color2="blue";
+let selectedcolor = color1 || color2   // note termination should not use here
+console.log(selectedcolor);
