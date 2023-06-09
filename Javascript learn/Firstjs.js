@@ -346,7 +346,7 @@ while(z<10);
 
 ////////////////////////////////////////////////////
 
-                 /////////////////OOOPS CONCEPT
+ 
 
 let studata2 =
 {
@@ -360,12 +360,7 @@ let studata2 =
   city: "chennai",
   state: "Tamilnadu",
  },
- greeting: function(){
-
-  let msg = "My name is" + name2 +",i love"+ interest;
-  console.log(msg);
- }
-
+ 
 };
 
 console.log(studata2.state);
@@ -377,11 +372,11 @@ console.log(studata2.state);
 //////////////////////////////////////////////////////////////////////////
 
 
-
+//                  OOOPS CONCEPT
 
 
 let age1 = 24;
-let name2 = "santhosh";
+let name2 = "santhosh kumar";
  
  let interest =  ['creating,teaching new things.'];
  
