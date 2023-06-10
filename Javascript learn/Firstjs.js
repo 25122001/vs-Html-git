@@ -86,7 +86,7 @@ function data1(id) {
   console.log(result1);
 } // function called three times
 data1(3456);
-data1(0101); // taken as binary code
+
 data1(1234);
 
 function data2(firstname, lastname) {
@@ -222,7 +222,7 @@ if (hour >= 0 && hour <= 12) {
 } else hour > 16 && hour <= 24;
 {
   console.log("good evening");
-}
+} //also see second.js enumerating concept
 
 
 //    SWITCH CASE
@@ -347,11 +347,10 @@ while(z<10);
 ////////////////////////////////////////////////////
 
  
-
 let studata2 =
 {
  age: 24,
- name1 : "Anbu",
+ name1 : "santhosh kumar",
  City : "chennai",
  state : "Tamil nadu",
  interest: ['creating,teaching new things.'],
@@ -366,17 +365,40 @@ let studata2 =
 console.log(studata2.state);
 
 
+//////////////////////////////////////////////////////////////////////////
+
+let studata3 =               // Recommended oops function
+{
+ age: 24,
+ name1 : "santhosh kumar",
+ City : "chennai",
+ state : "Tamil nadu",
+ interest: ['creating,teaching new things.'],
+ isalive: true,
+ address: {
+  city: "chennai",
+  state: "Tamilnadu,India",
+ },
+ greeting: function(){
+  let msg = `My name is ${name1}, i love ${interest}`;
+  console.log(msg);
+ }
+ 
+};
+console.log(studata3.address.state);
+
+
 
 
 
 //////////////////////////////////////////////////////////////////////////
 
+///OOOPS CONCEPT
 
-//                  OOOPS CONCEPT
 
 
 let age1 = 24;
-let name2 = "santhosh kumar";
+let name2 = "SANTHOSH KUMAR";
  
  let interest =  ['creating,teaching new things.'];
  
@@ -387,9 +409,90 @@ let name2 = "santhosh kumar";
 
  function greeting1(){
 
-  let msg = "My name is" + name2 +",i love"+ interest;
+  //let msg = "My name is" + name2 +",i love"+ interest;  /// THE SAME OUTPUT WILL GIVE
+  let msg = `My name is ${name2}, i love ${interest}`;
   console.log(msg);
 
  }
 
  greeting1();
+
+
+
+ /////////////////////////////////////
+
+
+  //         ---------------------------FACTORY  FUNCTIONS---------------------------------------          //
+
+ function createPerson(name)
+ {
+ return {
+    name,  // creating name dynamically
+    
+    greeting()
+    {
+      let msg = `My name is ${this.name}`;
+      console.log(msg);
+    }
+
+  };
+  
+ }
+ let dynamicname =createPerson("SK");
+ let dynamicname2 = createPerson("SKS");
+ dynamicname.greeting();
+ dynamicname2.greeting();
+
+
+   //         ---------------------------Constructor  FUNCTIONS---------------------------------------          //
+
+   function Candidate(name){     // all constructor name should be in pascal case
+    this.name = name;
+    this.greeting = function()   // Candidate.length = type in browser console it will fetch the paramater length.
+    {
+      console.log(`My name is ${this.name}`);
+    }
+    
+   }
+
+   let candidate = new Candidate("santhosh")   // a new memory allocation for object
+/*Candidate.call({}, "SANTHOSH","37")
+   Candidate.apply({},["SANTHOSH","37"])*/   // by using call and apply inbuilt methods we can also use to get ouput instead of allocating new method (Note: dont try just for knowledge)
+   candidate.greeting();
+
+
+
+
+
+   //         ---------------------------Dynamic Object--------------------------------------          //
+
+   const person3 = {
+     
+    name: "Anbu"
+   }
+
+   person3.age = 24;
+   person3.greeting2 = function(){}
+   delete person3.greeting2; /// here we delete the greeting also we can  delete,add,edit no of data under the object variable
+
+
+   console.log(person3);
+
+   /////////////////////////////////////////////////////////
+
+//         ---------------------------String and Numeric literals--------------------------------------          //
+
+let pername = "sumsan";
+let age2 = 2;
+let isalive = true;
+console.log(pername,age2,isalive);
+
+
+////////////////////////////////  OR   //////////////////
+
+let pername2 = new String("sumsan2");
+let age3 =new Number (2);
+let Isalive = new Boolean(true)
+console.log(pername2,age3,Isalive);
+
+
