@@ -252,4 +252,116 @@ additional_cart.forEach( routine => {
     
 });
 
-additional_cart2.join()
+//////////////////////////////////////// joining and splitting arrays ///////////////////////////////////
+//  ---------------> JOIN <---------------//  
+
+
+
+let Routines = additional_cart2.join(", ");// automatically gives commos if we additionally puts commos (",")it will increase space
+console.log(Routines);
+
+//  ---------------> SPLIT <---------------//  
+
+let fullname = "Santhosh Kumar";
+let name1 = fullname.split(" ");
+let FirstName = name1[0];
+let LastName = name1[1];
+console.log(`my first name is ${FirstName} and lastname 
+is ${LastName}`);
+
+
+
+let postTitle = "This is my post!".toUpperCase();
+let postslug = postTitle.split(" ");
+let finalslug = postslug.join("_"); // slug is known as hypen and underscore
+console.log(finalslug);
+
+//////////////////////////////////////// sorting arrays ///////////////////////////////////
+
+const students = [3,8,1];
+students.sort();  // ascending
+
+students.sort(function(a,b){
+  return b-a;
+})                   // decending
+
+
+students.reverse();
+
+console.log(students);
+
+const students1 = [
+{id : 3,name2: "senthil"},
+{id : 8,name2: "san"},
+{id : 1,name2: "kumar"},
+
+];
+
+// a<b => -1
+//a>b => 1
+// a===b =>0
+
+// while sorting names compare with ascii table (caps and small alpha order)
+
+students1.sort(function(a, b){
+if (a.name2 < b.name2) return -1;  // by name sorting
+if(a.name2 > b.name2) return 1;
+return 0;
+})
+console.log(students1);
+
+
+students1.sort((a, b) =>{
+  nameA = a.name2.toLowerCase();
+  nameB = a.name2.toLowerCase();
+  if (nameA < nameB) return -1;  // by name sorting
+  if(nameA > nameB) return 1;
+  return 0;
+  })
+  console.log(students1);
+  
+
+
+
+students1.sort(function(a, b){
+  if (a.id < b.id) return -1;  // by id sorting
+  if(a.id > b.id) return 1;
+  return 0;
+  })
+  
+  console.log(students1);
+
+
+//////// Testing elements [ EVERY and SOME function ] /////////////
+
+  const queue = [2,34,65];
+  let isAllowed = queue.every(function(value,index,array){ // value, index,array is not mandatory to mention all one is enough 
+    console.log(`value: ${value}`);// "every" is used (all should true satisfies condition)
+                                   // "some" (any one true satisfies condition) 
+    console.log("index",index);
+    console.log("array",array);
+     return value >= 18;
+
+  });
+
+  console.log("isallowed: ",isAllowed);
+
+
+/// example2 
+
+const items = [
+{id: 1,name6: "mobiles", isdeliverable: true},
+{id: 2,name6: "Tablets", isdeliverable: true},
+{id: 3,name6: "TV", isdeliverable: false},
+];
+
+let allDeliverable = items.every(function(value){
+  return value.isdeliverable == true;
+});
+
+let notDeliverable = items.some(function(value){
+  return value.isdeliverable == true; // double equal to check , three equal to assign.
+});
+
+console.log("Alldeliverable", allDeliverable);
+console.log("notdeliverable", notDeliverable);
