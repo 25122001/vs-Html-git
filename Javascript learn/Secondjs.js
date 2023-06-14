@@ -434,7 +434,7 @@ let final2 = peopledata.map(function(val){
 });
 console.log(final2);
 
-//////  CHAINING METHODS   ////////
+//////  CHAINING METHODS[sort,filter and map]   ////////
 
 
 // normally we first done  general technique
@@ -445,7 +445,7 @@ let product_items =[
   ];
 
 
-  ///   [using sorting functions]  
+  ///   [using sorting  call back functions]  
 
   let sortByPrice = product_items.sort(function(a,b){
     return a.cost - b.cost;// ascending order(cost)
@@ -484,7 +484,7 @@ let product_items2 =[
   ];
 
 
-  ///   [using sorting functions]  
+  ///   [using sorting call back functions]  
 
   let finalize2 = product_items2.sort(function(a,b){
     return a.cost - b.cost;
