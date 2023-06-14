@@ -365,3 +365,163 @@ let notDeliverable = items.some(function(value){
 
 console.log("Alldeliverable", allDeliverable);
 console.log("notdeliverable", notDeliverable);
+
+
+//////  FILTER and FIND FUNCTION   ////////
+
+const agepredict = [16,19,22];
+let adults = agepredict.filter(function(value){
+  return value >=18;
+
+});
+console.log("adults:",adults);
+//ex 2////
+const numberpredict = [16,19,22];
+let even = numberpredict.filter(function(value){ // we can also use arrow function
+  return value % 2 ==  0;
+
+});
+console.log("adults:",even);
+
+//  ex 3 //
+
+const cart_items =[
+{id:1 , items: "Android phones", cost: "6500"},
+{id:2 , items: "iphones", cost: "27000"},
+{id:3 , items: "window phones", cost: "7500"},
+];
+   // Filter {it will fetch as array of object as ouput} 
+let pricelow = cart_items.filter((value) =>  value.cost < 10000); // we can also use normal function(calling function)
+
+console.log("low price mobiles", pricelow);
+
+
+   // Find {it will fetch as first occurence object as ouput}
+let pricelow2 = cart_items.find((value) =>  value.cost < 10000); // we can also use normal function(calling function)
+
+console.log("low price mobiles", pricelow2);
+
+
+//////  MAP FUNCTION   ////////
+
+const multiplication =  [1,2,3,4,5];
+let outresult = multiplication.map(function(val)
+{
+  return val * 3;
+});
+console.log(outresult);
+
+//  ex:2
+
+const peopledata = [
+  {id:1, first_name: "santhosh", last_name: "kumar"},
+  {id:2, first_name: "anbu", last_name: "selvan"},
+  {id:3, first_name: "ajith", last_name: "kumar"},
+];
+
+let final = peopledata.map(function(val){
+  return[val.first_name, val.last_name].join(" ");
+
+});
+console.log(final);
+
+
+/// OR ///
+
+let final2 = peopledata.map(function(val){
+  let fullName = [val.first_name, val.last_name].join(" ");
+    return fullName;
+});
+console.log(final2);
+
+//////  CHAINING METHODS   ////////
+
+
+// normally we first done  general technique
+let product_items =[
+  {id:1 , title: "Android phones", cost: "6500"},
+  {id:2 , title: "iphones", cost: "27000"},
+  {id:3 , title: "window phones", cost: "7500"},
+  ];
+
+
+  ///   [using sorting functions]  
+
+  let sortByPrice = product_items.sort(function(a,b){
+    return a.cost - b.cost;// ascending order(cost)
+    //return b.cost - a.cost; // descending order(cost)
+  });
+  console.log(sortByPrice);
+
+  let sortByTitle = sortByPrice.sort(function(a,b){
+    if(a.title < b.title) return -1;//ascending order(title)
+    if(a.title > b.title) return 1;//decending order(title)
+    return 1;
+  });
+ 
+
+// only below and equal to  8000 if filtered.(using filter function)
+
+  let filtered = sortByTitle.filter(function(value){
+    return value.cost <= 8000;
+  });
+
+  let finalize = filtered.map(function(val){
+    return val.title + " ₹" + val.cost;
+
+  });
+  console.log(finalize);
+
+
+
+
+  /////  CHAINING METHODS [recommended]  //////// [ it is denoted by " . " a link is created and produce last task as output ]
+
+let product_items2 =[
+  {id:1 , title: "Android phones", cost: "6500"},
+  {id:2 , title: "iphones", cost: "27000"},
+  {id:3 , title: "window phones", cost: "7500"},
+  ];
+
+
+  ///   [using sorting functions]  
+
+  let finalize2 = product_items2.sort(function(a,b){
+    return a.cost - b.cost;
+    //return b.cost - a.cost;
+  }).sort(function(a,b){ // here first link
+    if(a.title < b.title) return -1;
+    if(a.title > b.title) return 1;
+    return 1;
+  }).filter(function(value){  // here second link
+    return value.cost <= 8000;
+  }).map(function(val){    // here last link of chain
+    return val.title + " ₹" + val.cost;
+
+  });
+  console.log(finalize2);
+
+
+
+    ///// [OR] USING ARROW FUNCTION //////// 
+let product_items3 =[
+  {id:1 , title: "Android phones", cost: "6500"},
+  {id:2 , title: "iphones", cost: "27000"},
+  {id:3 , title: "window phones", cost: "7500"},
+  ];
+ 
+
+  let finalize3 = product_items3
+  .sort((a,b)=> {
+    return a.cost - b.cost;
+    //return b.cost - a.cost;
+  }).sort(function(a,b){ 
+    if(a.title < b.title) return -1;
+    if(a.title > b.title) return 1;
+    return 1;
+  }).filter((value) => value.cost <= 8000)
+  .map((val) => val.title + " ₹" + val.cost);
+
+  
+  console.log(finalize3);
+
