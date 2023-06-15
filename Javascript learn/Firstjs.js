@@ -4,7 +4,7 @@ var Name = "santhosh kumar";
 var Name = "santhosh";
 var msg = "hello this,is my name" + Name + "Var able to reassign,redeclare";
 
-let person = "santhosh kumar";
+let person = "santhosh kumar";  // Best to use LET variable mostly 
 person = "yuvaraj"; // without variable can reassign the data
 let msg1 =
   "This is your" + person + "   " + "let not able to reassign,redeclare ";
