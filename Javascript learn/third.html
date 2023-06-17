@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', () =>{  
+         
+        const myapp =document.getElementById('app')
+        
+        const heading = myapp.children[0]  // myapp.children[0] at zero index the value is updated
+        const image = myapp.children[1]
+
+        heading.innerHTML = `<h1> Understand DOM content Update</h1>` ; //heading.innerhtml  here we change only zero index content
+        
+    
+
+        
+     } )
+        
+        </script>
+    
+</head>
+<body>
+
+    <div id="app">
+        <h1>Learn DOM</h1>
+        <img src ="https://wallpaper.dog/large/5554825.jpg">
+        <!-- " copy image address " from the internet -->
+      </div>
+    
+</body>
+</html>

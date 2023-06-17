@@ -188,3 +188,60 @@ const channel8 = {
 channel8.showvideos();
 
 
+/////////////////////           DOM(DOCUMENT OBJECT MODEL)  -----> COLLECTION OF DOM NODE (DOM TREE)    /////////////////////////////////////
+/////////////////////           BOM(BROWSER OBJECT MODEL)      /////////////////////////////////////
+
+console.log(window.screen);
+console.log(screen.width, screen.height);
+console.log(window.history);
+console.log(window.location);
+console.log(window.location.host);
+console.log(window.navigator);
+
+console.dir(document);
+console.log(document.domain);
+console.log(document.URL);
+console.log(document.title);
+document.title = "santhoshport"
+console.log(document.title);
+//document.body
+//document.link
+//document.cookie
+//document.images
+
+
+
+/*window.setInterval(function(){
+    window.document.title ="title change every 5000 sec";
+
+}, 5000);*/
+
+/*setInterval(() => {
+    location.href ="https://google.com"; //location.assign also we can use
+}, 5000);*/
+
+const person ={
+    name: "santhosh",
+    place: "chennai",
+    greetUser(){
+        return `hello,my name is ${this.name} and i'm coming from ${this.place}`;
+    },
+};
+person.name = "santho";
+person.place = "madurai";
+const person1 = person.greetUser();
+console.log(person1);
+document.body.innerText =person1; // it is in innertext
+document.body.innerHTML =`<h1>${person1}</h1>`;   // it is in innerHTML
+//prompt("what is yourname", "santhosh");
+const nameInput = prompt("what is your name");
+const placeInput = prompt("wher are you coming from:");
+person.name = nameInput;
+person.place = placeInput;
+document.body.innerHTML= person.greetUser();
+
+//   or //
+
+//document.write(person.greetUser());
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //dom  knew within the title  there is no id=app to avoid this one solution found 
+        document.addEventListener('DOMContentLoaded', () =>{  // after the dom nodes fully bundled automatically dom default throws domcontentloaded only knows by rendering engine 
+         // then according to code addeventlistener catch the result true after that code executes successfully.   
+        const myapp =document.getElementById('app')
+        myapp.innerHTML = `<h1> Understand DOM content Update</h1>`; // when you comment the previous data is loaded
+        console.log(myapp);
+     } )
+        
+        </script>
+    
+</head>
+<body>
+
+    <div id="app">
+        <h1>Learn DOM</h1>
+      </div>
+    
+</body>
+</html>

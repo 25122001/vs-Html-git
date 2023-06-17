@@ -7,6 +7,19 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="Secondjs.js"></script>
+    <div id="app">
+      <h1>Learn DOM</h1>
+    </div>
+    <!-- <script src="fourthjs.js"></script> -->
+
+    <!-- DOM CONTENT LOADED -->
+
+    <script>
+      const myapp = document.getElementById("app");
+      myapp.innerHTML = `<h1> Understand DOM content Update</h1>`;
+      console.log(myapp);
+    </script>
+
+<!-- dom content continue in second.html -->
   </body>
 </html>
