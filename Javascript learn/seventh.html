@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sixth.css">
+</head>
+<body>
+    <main id ="main">
+        <div class ="alert">
+         <strong>✅successful</strong>   Food is updated....
+        </div>
+        <div >
+        <h1 id="idfetch">learn html dom in javascript</h1>
+        <p> let understand getelementbyid</p>
+        <input type = "text" name="input-food-name" placeholder="i like pizza"class="input-food" id="input-food" >
+    <button class="input-button" id="input-btn">save</button>
+    </div>
+    
+        <ul id="food-container" class="food-container">
+            <li class="food-items">sambar</li>
+            <li class="food-items">rasam</li>
+            <li class="food-items veg">brinjal</li>
+            <li class="food-items veg">carrot</li>
+            <li class="food-items">curd</li>
+        </ul>
+
+    </main>
+    
+    <script>   // 1st script
+        const div = document.getElementsByTagName("div");
+        console.log(div);
+    </script>
+
+    <!-- creating dom elements using js -->
+
+<div>
+    this is another div.
+</div>
+
+<script>   //2nd script
+    console.log(div);    
+</script>
+
+     
+    <script src="seventh.js"></script> <!-- 1stexternaljs -->
+    <script src="seventh2.js"></script> <!-- 2ndexternaljs -->
+
+    
+    
+</body>
+</html>

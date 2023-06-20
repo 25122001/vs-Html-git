@@ -1,0 +1,38 @@
+.food-item{
+    padding: 5px 10px;
+    outline: none;
+}
+.input-button{
+    padding: 6px 10px;
+background-color:#1b63ff ;
+border: none;
+border-radius: 5px;
+color: #ffff;
+}
+
+.food-container{
+    margin:20px 0;
+    background: #ffff;
+    list-style: none;
+    padding:20px;
+}
+
+.food-container .food-items
+{
+    padding:10px;
+    font-size: 14px;
+    border: 1px solid gray;
+    margin: 10px 0;
+}
+
+.alert {
+    background-color: #29a746;
+    padding: 10px;
+    font-size: 12px;
+    color: #ffff;
+    border-radius: 5px;
+    text-align: left;
+    border-left: 5px solid green;
+    font-weight: 500;
+    margin: 10px 0;
+}
