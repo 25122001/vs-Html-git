@@ -15,7 +15,7 @@ inputBtn.addEventListener("click", () => {
 
   newFoodItemEl.append(div, divBtn);
 
-
+// hello guru antony raj //
 
 
   // assigning textContent & className to newFoodItemEl
