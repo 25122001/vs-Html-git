@@ -10,14 +10,14 @@ inputBtn.addEventListener("click", () => {
   let foodItemElComment = document.createComment("Food items");
 
   // appending comment
-  foodContainer.append(foodItemElComment);
+  foodContainer.append(foodItemElComment);  // joining new list  with old list
 
   // assigning textContent & className to newFoodItemEl
   newFoodItemEl.textContent = inputFood.value;
-  newFoodItemEl.className = "food-item";
+  newFoodItemEl.className = "food-item";   // adding new items
 
   // appending newly created element(newFoodItemEl) to foodContainer
-  foodContainer.append(newFoodItemEl);
+  foodContainer.append(newFoodItemEl);  // joining new list  with old list
 
   // resetting the inputFood value
   inputFood.value = "";
