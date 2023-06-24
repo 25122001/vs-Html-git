@@ -3,7 +3,7 @@ let inputBtn = document.getElementById("input-btn");
 let foodContainer = document.getElementById("food-container");
 
 
-///////  ------------> 
+///////  ------------>    24 th video DOM (removing)   <--------------------------  //////
 
 
 inputBtn.addEventListener("click", () => {
